@@ -1,0 +1,65 @@
+create database COP4331;
+use COP4331;
+
+CREATE TABLE `COP4331`.`Users` 
+( 
+  `ID` INT NOT NULL AUTO_INCREMENT , 
+  `DateCreated` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+  `DateLastLoggedIn` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+  `FirstName` VARCHAR(50) NOT NULL DEFAULT '' , 
+  `LastName` VARCHAR(50) NOT NULL DEFAULT '' , 
+  `Login` VARCHAR(50) NOT NULL DEFAULT '' , 
+  `Password` VARCHAR(50) NOT NULL DEFAULT '' , 
+   PRIMARY KEY (`ID`)
+) ENGINE = InnoDB;
+
+insert into Users (FirstName,LastName,Login,Password) VALUES ('Mark','David','MarkD','Mark@4331');
+insert into Users (FirstName,LastName,Login,Password) VALUES ('Karina','Sanchez','KarinaS','COP@Karina1');
+insert into Users (FirstName,LastName,Login,Password) VALUES 
+('Mark','David','MarkD','9832z13366768098cceb7095efb984s2');
+insert into Users (FirstName,LastName,Login,Password) VALUES 
+('Karina','Sanchez','KarinaS','1sbc2311d3440fs0809a388yq95a691m');
+
+
+
+CREATE TABLE `COP4331`.`Contacts` 
+( 
+  `ID` INT NOT NULL AUTO_INCREMENT , 
+  `Name` VARCHAR(50) NOT NULL DEFAULT '' , 
+  `Phone` VARCHAR(50) NOT NULL DEFAULT '' , 
+  `Email` VARCHAR(50) NOT NULL DEFAULT '' , 
+  `UserID` INT NOT NULL DEFAULT '0' , 
+  PRIMARY KEY (`ID`)
+) ENGINE = InnoDB;
+
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Mark David','321-498-2812','markdavid@gmail.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Karina Sanchez','407-418-2761','ksanchez@gmail.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Nick Andrade','407-192-1736','nicka123@yahoo.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Jose Diaz','321-129-7653','josediaz28@hotmail.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Angel Francis','407-228-2882','afrancis01@icloud.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Robert Chase','202-555-0186','robert2001@yahoo.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Spencer James','604-555-0102','sjames96@gmail.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Kylie Kate','512-738-7783','kyliekate89@yahoo.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Andrea Cruz','601-221-5842','acruz91@gmail.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Gabriel Santana','904-156-2828','gabrielwashere87@gmail.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Anna Vazquez','405-172-4783','annav1999@hotmail.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Charles Davis ','407-277-2846','cdavis1234@yahoo.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Hannah Patel','321-399-2840','hannahcosmetics@gmail.com','1');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Ashley Veloz','407-173-7584','ashveloz91@icloud.com','1');
+
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Mark David','321-498-2812','markdavid@gmail.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Karina Sanchez','407-418-2761','ksanchez@gmail.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Nick Andrade','407-192-1736','nicka123@yahoo.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Jose Diaz','321-129-7653','josediaz28@hotmail.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Angel Francis','407-228-2882','afrancis01@icloud.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Robert Chase','202-555-0186','robert2001@yahoo.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Spencer James','604-555-0102','sjames96@gmail.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Kylie Kate','512-738-7783','kyliekate89@yahoo.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Andrea Cruz','601-221-5842','acruz91@gmail.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Gabriel Santana','904-156-2828','gabrielwashere87@gmail.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Anna Vazquez','405-172-4783','annav1999@hotmail.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Charles Davis ','407-277-2846','cdavis1234@yahoo.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Hannah Patel','321-399-2840','hannahcosmetics@gmail.com','2');
+insert into Contacts (Name,Phone,Email,UserID) VALUES ('Ashley Veloz','407-173-7584','ashveloz91@icloud.com','2');
+
+
