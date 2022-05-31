@@ -4,7 +4,7 @@
 	// $id = 0;
 	$firstName = trim($inData["FirstName"]);
 	$lastName = trim($inData["LastName"]);
-	$email = trim($inData["email"]);
+	//$email = trim($inData["email"]);
 	$login = trim($inData["login"]);
 	$password = trim($inData["password"]);
 	$confirmpassword = trim($inData["confirmpassword"]);
@@ -31,7 +31,7 @@
 			||empty($login)
 			||empty($password)
 			||empty($confirmpassword)
-			||empty($email)
+// 			||empty($email)
 			)
 		{
 			returnWithError("Please fill in all fields");
@@ -41,10 +41,10 @@
 		    returnWithError("Username is already taken");
 		}
 		//validate email
-		elseif(!filter_var($email,FILTER_VALIDATE_EMAIL))
-		{
-			returnWithError("Not a valid email");
-		}
+// 		elseif(!filter_var($email,FILTER_VALIDATE_EMAIL))
+// 		{
+// 			returnWithError("Not a valid email");
+// 		}
 		//check pass length
 		elseif(strlen($password) < 8 )
 		{
@@ -66,7 +66,7 @@
       	   	VALUES ('$firstName','$lastName','$login', '$password')";
       	   	$results = mysqli_query($conn, $query);
            	echo 'Saved!';
-           	returnWithError("Something isnt wrong");
+//            	returnWithError("Something isnt wrong");
 			exit();
 		}
 
