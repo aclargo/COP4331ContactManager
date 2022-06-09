@@ -7,7 +7,7 @@
 	//$email = trim($inData["email"]);
 	$login = trim($inData["login"]);
 	$password = trim($inData["password"]);
-	$confirmpassword = trim($inData["confirmpassword"]);
+// 	$confirmpassword = trim($inData["confirmpassword"]);
 
 
 	$conn = new mysqli("localhost", "Group11", "WeLoveCOP4331", "COP4331");
@@ -30,7 +30,7 @@
 			||empty($lastName)
 			||empty($login)
 			||empty($password)
-			||empty($confirmpassword)
+// 			||empty($confirmpassword)
 // 			||empty($email)
 			)
 		{
@@ -51,10 +51,10 @@
 			returnWithError("Password needs 8 characters minimum");
 		}
 		//confirm pass
-		elseif ($confirmpassword != $password) 
-		{
-			returnWithError("Passwords do not match");
-		}
+// 		elseif ($confirmpassword != $password) 
+// 		{
+// 			returnWithError("Passwords do not match");
+// 		}
 		else 
 		{
 			//add the user to the users table here
