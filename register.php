@@ -16,24 +16,25 @@
 	//if it connects to the server we can start filling out the text fields
 	else
 	{
-		// need to add somewhere in here code to add user to the database.
 
-		//check if all fields are full
-		// if(
-		// 	empty($firstName)
-		// 	||empty($lastName)
-		// 	||empty($login)
-		// 	||empty($password)
-		// 	)
-		// {
-		// 	returnWithError("Please fill in all fields");
-		// }
-		
-		// else 
-		// {
-			//add the user to the users table here
 
-			
+			// login logic below
+  	   	$stmt = $conn->prepare("SELECT ID,firstName,lastName FROM Users WHERE Login=? AND Password =?");
+		$stmt->bind_param("ss", $login, $password);
+		$stmt->execute();
+		$result = $stmt->get_result();
+			// login logic above
+	//login info
+		if ($row = $result->fetch_assoc()  )
+		{			//if a user with these credentials exists -> login
+			$_SESSION['user'] = $row['ID'];
+			returnWithInfo( $row['firstName'], $row['lastName'], $row['ID'], "Logged in!");
+		}
+	//login info
+
+		else
+		{
+		//register logib below
 			$query = "INSERT INTO `Users` (FirstName,LastName,Login, Password) 
       	   	VALUES ('$firstName','$lastName','$login', '".md5($password)."')";
            	$results = mysqli_query($conn, $query);
@@ -42,24 +43,29 @@
            	$query = "INSERT INTO `Users` (FirstName,LastName,Login, Password) 
       	   	VALUES ('$firstName','$lastName','$login', '$password')";
       	   	$results = mysqli_query($conn, $query);
+      	//register logic above
 
-
+  	   	// login logic below
       	   	$stmt = $conn->prepare("SELECT ID,firstName,lastName FROM Users WHERE Login=? AND Password =?");
 			$stmt->bind_param("ss", $login, $password);
 			$stmt->execute();
 			$result = $stmt->get_result();
+		// login logic above
 
-      	   	if ($row = $result->fetch_assoc()  )
+		//login info
+			if ($row = $result->fetch_assoc()  )
       	   	{
 				$_SESSION['user'] = $row['ID'];
 				returnWithInfo( $row['firstName'], $row['lastName'], $row['ID'], "Saved!");
 			}
+		//login info
 
+			
+			
 
-           	// echo '"Saved!"';
-           	// returnWithError("Saved!");
+      	   	
 			exit();
-		// }
+		}
 
 	}
 
