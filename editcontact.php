@@ -18,7 +18,7 @@
 		if(!filter_var( !is_null($email) && $email,FILTER_VALIDATE_EMAIL))
 		{
 
-			$sql = "UPDATE Contacts SET Email='$email' WHERE id='$ID'";
+			$sql = "UPDATE Contacts SET Email='$email' WHERE ID='$ID'";
 			if(mysqli_query($conn, $sql)){
 			    echo "Email was updated successfully.";
 			} else {
@@ -29,7 +29,7 @@
 		
 		if(!is_null($phone))
 		{
-			$sql = "UPDATE Contacts SET Phone='$phone' WHERE id='$ID'";
+			$sql = "UPDATE Contacts SET Phone='$phone' WHERE ID='$ID'";
 			if(mysqli_query($conn, $sql)){
 			    echo "Phone was updated successfully.";
 			} else {
@@ -39,7 +39,7 @@
 		
 		if(!is_null($Name))
 		{
-			$sql = "UPDATE Contacts SET Name='$Name' WHERE id='$ID'";
+			$sql = "UPDATE Contacts SET Name='$Name' WHERE Id='$ID'";
 			if(mysqli_query($conn, $sql)){
 			    echo "Name was updated successfully.";
 			} else {
