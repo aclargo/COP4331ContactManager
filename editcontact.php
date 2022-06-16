@@ -15,7 +15,7 @@
 	}
 	else
 	{	
-		if(!filter_var( !is_null($email) && $email,FILTER_VALIDATE_EMAIL))
+		if(!filter_var( !is_null(trim($email)) && $email,FILTER_VALIDATE_EMAIL))
 		{
 
 			$sql = "UPDATE Contacts SET Email='$email' WHERE ID='$ID'";
@@ -27,7 +27,7 @@
 			
 		}
 		
-		if(!is_null($phone))
+		if(!is_null(trim($phone)))
 		{
 			$sql = "UPDATE Contacts SET Phone='$phone' WHERE ID='$ID'";
 			if(mysqli_query($conn, $sql)){
@@ -37,7 +37,7 @@
 			}
 		}
 		
-		if(!is_null($Name))
+		if(!is_null(trim($Name)))
 		{
 			$sql = "UPDATE Contacts SET Name='$Name' WHERE Id='$ID'";
 			if(mysqli_query($conn, $sql)){
@@ -47,7 +47,7 @@
 			}
 		}
 		
-		if(is_null($Name) && is_null($phone) && is_null($email))
+		if(is_null(trim($Name)) && is_null(trim($phone)) && is_null(trim($email)))
 		{
 			echo "Somthings wrong";
 			sendResultInfoAsJson("Nothing updated");
