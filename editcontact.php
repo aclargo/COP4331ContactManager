@@ -3,7 +3,7 @@
 
 	$inData = getRequestInfo();
 	
-	$Id = $inData["ID"];
+	$ID = $inData["ID"];
 	$Name = trim($inData["Name"]);
 	$email = trim($inData["email"]);
 	$phone = trim($inData["phone"]);
@@ -18,7 +18,7 @@
 		if(!filter_var( !is_null($email) && $email,FILTER_VALIDATE_EMAIL))
 		{
 
-			$sql = "UPDATE Contacts SET Email='$email' WHERE id='$Id'";
+			$sql = "UPDATE Contacts SET Email='$email' WHERE id='$ID'";
 			if(mysqli_query($conn, $sql)){
 			    echo "Email was updated successfully.";
 			} else {
@@ -27,9 +27,9 @@
 			
 		}
 		
-		if(!empty($phone))
+		if(!is_null($phone))
 		{
-			$sql = "UPDATE Contacts SET Phone='$phone' WHERE id='$Id'";
+			$sql = "UPDATE Contacts SET Phone='$phone' WHERE id='$ID'";
 			if(mysqli_query($conn, $sql)){
 			    echo "Phone was updated successfully.";
 			} else {
@@ -37,9 +37,9 @@
 			}
 		}
 		
-		if(!empty($Name))
+		if(!is_null($Name))
 		{
-			$sql = "UPDATE Contacts SET Name='$Name' WHERE id='$Id'";
+			$sql = "UPDATE Contacts SET Name='$Name' WHERE id='$ID'";
 			if(mysqli_query($conn, $sql)){
 			    echo "Name was updated successfully.";
 			} else {
@@ -47,7 +47,7 @@
 			}
 		}
 		
-		if(empty($Name) && empty($phone) && empty($email))
+		if(is_null($Name) && is_null($phone) && is_null($email))
 		{
 			echo "Somthings wrong";
 			sendResultInfoAsJson("Nothing updated");
