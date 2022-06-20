@@ -1,1 +1,48 @@
+body
+{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('images/backg.jpeg');
+  opacity:1;
+}
+
+h1
+{
+  text-align:center;
+  padding: 65px;
+  color:white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 2px black;
+  Font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  font-size: 42px;
+}
+
+h2
+{
+  text-align:center;
+  Font-family: Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+  color: white;
+  font-size: 20px;
+  z-index: 1;
+
+}
+
+table, td, th 
+{  
+  border: 2px solid white;
+  text-align: center;
+  color: white;
+  background-color: grey;
+}
+  
+table 
+{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td 
+{
+  padding: 15px;
+  width: 21%;
+}
 

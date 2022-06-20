@@ -1,0 +1,363 @@
+.logBox 
+{
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    font-weight: 400;
+    width: 380px; 
+    height: 250px;
+    position: relative;
+    margin: 60px auto 30px;
+    padding: 10px;
+    background: #111; 
+    border-radius: 0.4em;
+    border: 1px solid #191919;
+    box-shadow: 
+        inset 0 0 2px 1px rgba(255,255,255,0.08), 
+        0 16px 10px -8px rgba(0, 0, 0, 0.6);
+}
+
+.logBox label 
+{
+    margin-right: 35px;
+    margin-left: 25px;
+    float: left;
+    text-align: center;
+    padding-top: 9px;
+    color: #ddd;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 0 #000;
+    text-indent: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.logBox input[type=text],
+.logBox input[type=password] 
+{
+    padding: 8px 5px;
+    width: 55%;
+    margin-bottom: 10px;
+    margin-left: 4px;
+    font-size: 13px;
+    background: linear-gradient(#1f2124, #27292c);    
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: #fff;
+}
+
+.logBoxSearch label {
+    margin-right: 35px;
+    margin-left: 25px;
+    float: left;
+    text-align: center;
+    padding-top: 9px;
+    color: #ddd;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 0 #000;
+    text-indent: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.logBoxSearch input[type=text],
+.logBoxSearch input[type=password] 
+{
+    padding: 8px 5px;
+    width: 55%;
+    margin-bottom: 10px;
+    margin-left: 4px;
+    font-size: 13px;
+    background: linear-gradient(#1f2124, #27292c);    
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: #fff;
+}
+.logBox input[type=text]:hover,
+.logBox input[type=password]:hover,
+.logBox label:hover ~ input[type=text],
+.logBox label:hover ~ input[type=password] {
+    background: #27292c;
+}
+
+.logBox input[type=text]:focus, 
+.logBox input[type=password]:focus {
+    box-shadow: inset 0 0 2px #000;
+    background: #494d54;
+    border-color: white;
+    outline: none; /* Remove Chrome outline */
+}
+.logBoxButton 
+{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 14px;
+    margin-top: 5%;
+    padding: 8px 5px;
+    border: 1px solid rgba(0,0,0,0.4);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.3),
+        inset 0 10px 10px rgba(255,255,255,0.1);
+    border-radius: 3px;
+    background: #3c18c1e6;
+    cursor:pointer;
+    font-family: 'Ubuntu', 'Lato', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.8);
+}
+.logBox label[for=showPass] {
+    width: auto;
+    float: none;
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-indent: 2px;
+    margin-left: 0%;
+    margin-top: -10px;
+}
+.logBox input[type=checkbox] {
+    margin-left: 155px;
+    margin-bottom: 4px;
+    vertical-align: middle;
+}
+
+/* Gradient line */
+.logBox:after {
+    /* Size and position */
+    content: "";
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    left: 20%;
+    top: 10;
+
+    /* Styles */
+    background: linear-gradient(left, transparent, #444, #b6b6b8, #444, transparent);
+}
+
+#logDiv
+{
+    background-color: #e89dd8;
+    border-radius: 25px;
+    opacity:1;
+    box-shadow: 10px 10px 5px black;
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.button 
+{
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 12px;
+  background-color: #281a56;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-left: 30px;
+  z-index: -1;
+}
+
+.button span 
+{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after 
+{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span 
+{
+  padding-right: 25px;
+}
+
+.button:hover span:after 
+{
+  opacity: 1;
+  right: 0;
+}    
+
+.arrow 
+{
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+} 
+
+.right 
+{
+    transform: rotate(-45deg);
+}
+ 
+.left 
+{
+    transform: rotate(135deg);
+}
+
+.container {
+    margin: 75px auto;
+    width: 500px;
+    height: 225px
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: row;
+  }
+  .search-field {
+    width: 100%;
+    padding: 10px 35px 10px 15px;
+    border: none;
+    border-radius: 100px;
+    outline: none;
+  }
+  
+  .search-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: -33px;
+  }
+  
+  .search-button img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+  }
+
+  .home-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-left: -33px;
+    z-index: -10;
+    cursor: pointer;
+  }
+  
+  .home-button img {
+    width: 30px;
+    height: 20px;
+    object-fit: cover;
+    z-index: -10;
+    cursor: pointer;
+  }
+
+  div#banner 
+  { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    background-color: black; 
+    width: 100%; 
+    height: 50px;
+  }
+     
+  div#banner-content 
+  { 
+    width: 800px; 
+    margin: 0 auto; 
+    padding: 10px; 
+    border: 1px solid #000;
+  }
+a.one 
+{
+    text-decoration: underline;
+    color: rgb(99, 57, 216);
+}
+a.one:hover 
+{
+    color:#ffcc00;
+    text-decoration: underline;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 380px; 
+  height: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: grey;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: grey;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
